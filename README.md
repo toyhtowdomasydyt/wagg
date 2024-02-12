@@ -1,6 +1,6 @@
 ## Description
 
-WAGG app for simply get data from openweathermap and stor it in database
+WAGG it's an simple app for getting data from openweathermap and storing it in database
 
 ## Running the app
 
