@@ -21,9 +21,11 @@
     "prepare": "ts-patch install && typia patch"
   },
   "dependencies": {
-    "@mikro-orm/core": "^6.1.1",
+    "@mikro-orm/cli": "^6.1.2",
+    "@mikro-orm/core": "^6.1.2",
+    "@mikro-orm/migrations": "^6.1.2",
     "@mikro-orm/nestjs": "^5.2.3",
-    "@mikro-orm/postgresql": "^6.1.1",
+    "@mikro-orm/postgresql": "^6.1.2",
     "@nestia/core": "^2.5.4",
     "@nestia/e2e": "^0.4.1",
     "@nestia/fetcher": "^2.5.4",
@@ -76,5 +78,11 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/config/mikro-orm.config.ts"
+    ]
   }
 }
