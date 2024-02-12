@@ -18,7 +18,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "ts-patch install && typia patch"
+    "migration:up": "node --env-file=.env node_modules/@mikro-orm/cli/cli migration:up",
+    "prepare": "ts-patch install && typia patch",
+    "migration:up:and:run": "npm run migration:up && npm run start:prod"
   },
   "dependencies": {
     "@mikro-orm/cli": "^6.1.2",

@@ -11,6 +11,17 @@ services:
     volumes:
       - db:/var/lib/postgresql/data
 
+  nodejs:
+    container_name: wagg_local_backend
+    build: .
+    command: ['npm', 'run', 'migration:up:and:run']
+    depends_on:
+      - db
+    ports:
+      - '3000:3000'
+    env_file:
+      - '.env'
+
 volumes:
   db:
     driver: local
